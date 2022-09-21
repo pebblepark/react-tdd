@@ -7,3 +7,7 @@
 ### toBeTruthy, toBeFalsy
 
 - 참/거짓(Boolean) 값 체크
+
+### toContain
+
+- 배열(Array)에 특정 값이 포함되어 있는 확인
