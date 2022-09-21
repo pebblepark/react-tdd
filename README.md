@@ -3,3 +3,7 @@
 ### toEqual
 
 - 오브젝트(Object) 비교할 때 사용
+
+### toBeTruthy, toBeFalsy
+
+- 참/거짓(Boolean) 값 체크

@@ -1,4 +1,4 @@
-const { sum, person } = require('./index');
+const { sum, person, toggle } = require('./index');
 
 describe('test index.js file', () => {
     it('sums 1 + 2 to equal 3', () => {
@@ -6,8 +6,12 @@ describe('test index.js file', () => {
     }),
     it('makes a person', () => {
         expect(person('Kim', 20)).toEqual({
-        name: 'Kim',
-        age: 20,
+          name: 'Kim',
+          age: 20,
         });
     }),
+    it('returns false', () => {
+        expect(toggle(true)).toBeFalsy();
+        expect(toggle(false)).toBeTruthy();
+    });
 });
