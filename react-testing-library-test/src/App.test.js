@@ -6,5 +6,13 @@ describe('<App />', () => {
     render(<App />);
     const linkElement = screen.getByText(/learn react/i);
     expect(linkElement).toBeInTheDocument();
+
+    const img = screen.getByRole('img');
+    expect(img).toHaveAttribute('src', 'logo.svg');
+
+    const paragraph = screen.getByText(
+      (_, node) => node.textContent === 'Edit src/App.js and save to reload.'
+    );
+    expect(paragraph).toBeInTheDocument();
   });
 });
