@@ -3,7 +3,7 @@ import App from './App';
 
 describe('<App />', () => {
   it('renders component correctly', () => {
-    render(<App />);
+    const { container } = render(<App />);
     const linkElement = screen.getByText(/learn react/i);
     expect(linkElement).toBeInTheDocument();
 
@@ -14,5 +14,7 @@ describe('<App />', () => {
       (_, node) => node.textContent === 'Edit src/App.js and save to reload.'
     );
     expect(paragraph).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });
